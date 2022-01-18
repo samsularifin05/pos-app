@@ -47,7 +47,7 @@ function initApp() {
       console.log("products loaded", this.products);
     },
     async startWithSampleData() {
-      const response = await fetch("data/sample.json");
+      const response = await fetch("https://raw.githubusercontent.com/samsularifin05/tailwind-pos/main/data/sample.json?token=GHSAT0AAAAAABQVXPKEFF2LMFFXXQ66I6X6YPGE6BA");
       const data = await response.json();
       this.products = data.products;
       for (let product of data.products) {
@@ -106,7 +106,7 @@ function initApp() {
       }
       this.updateChange();
     },
-    addCash(amount) {      
+    addCash(amount) {
       this.cash = (this.cash || 0) + amount;
       this.updateChange();
       this.beep();
