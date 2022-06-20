@@ -47,7 +47,7 @@ function initApp() {
       console.log("products loaded", this.products);
     },
     async startWithSampleData() {
-      const response = await fetch("https://raw.githubusercontent.com/samsularifin05/tailwind-pos/main/data/sample.json?token=GHSAT0AAAAAABQVXPKEFF2LMFFXXQ66I6X6YPGE6BA");
+      const response = await fetch("https://raw.githubusercontent.com/samsularifin05/tailwind-pos/main/data/sample.json?token=GHSAT0AAAAAABTCIJWFQOWWLBLXSLO5MLNAYVQMTCQ");
       const data = await response.json();
       this.products = data.products;
       for (let product of data.products) {
